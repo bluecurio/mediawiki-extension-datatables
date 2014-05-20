@@ -1,86 +1,0 @@
-10
-
-dir
-22098
-svn://svn1.vistaprint.net/intranet/km/Current/Vistawiki/wiki/extensions/DataTables/DataTables/examples
-svn://svn1.vistaprint.net/intranet
-
-
-
-2012-11-06T20:07:09.335669Z
-20392
-drenfro
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-7b12b8a5-113f-9a42-b99c-9f028228416f
-
-ajax
-dir
-
-basic_init
-dir
-
-advanced_init
-dir
-
-api
-dir
-
-examples_support
-dir
-
-server_side
-dir
-
-index.html
-file
-
-
-
-
-2012-11-09T01:25:59.000000Z
-1091934e10bfc30e53011fe5414a9d30
-2012-05-07T19:30:02.058625Z
-19408
-drenfro
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-8636
-
-data_sources
-dir
-
-plug-ins
-dir
-

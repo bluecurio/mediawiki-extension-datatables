@@ -1,0 +1,51 @@
+= mediawiki-extension-datatables = 
+
+== What can this extension do? ==
+Adds the ''[http://datatables.net DataTables]'' extension for [[wikipedia:jQuery|jQuery]] to MediaWiki using the [[ResourceLoader]]. This extension is a thin wrapper around the jQuery library written by [http://www.sprymedia.co.uk/ Allan Jardine]; it is meant to provide the ''DataTables'' library for [[developers]] and is not intended to be a feature for wiki-users to use.
+
+== Usage ==
+To use this library in your custom MediaWiki extension, define <code>ext.datatables</code> as a dependency when [[ResourceLoader/Developing_with_ResourceLoader#Registering|registering your ResourceLoader module.]] That's it! MediaWiki will take care of the rest. You can go ahead and use the library right away. Like so:
+: <source lang="javascript" enclose="div" highlight="5">
+$myResourceLoaderModule => array(
+		'scripts'      => 'js/ext.myExtension.js',
+		'styles'       => 'css/ext.myExtension.css',
+		'dependencies' => array(
+			'ext.datatables',
+			// other javascript libraries...
+			)
+		);
+</source>
+
+You can then have your JavaScript call datatables using the typical call:
+$( '#example' ).dataTable();
+Please see the excellent documentation of DataTables at http://datatables.net/. There are many examples and this code is quite flexible. 
+
+== Download instructions ==
+You can install this extension by cloning the [https://github.com/bluecurio/mediawiki-extension-datatables Github repository] or by downloading a ZIP file from Github and installing it manually. (See below.) Once you have the code in place, add the following to [[Manual:LocalSettings.php|LocalSettings.php]]:
+<source lang="php">
+# DataTables
+require_once( "$IP/extensions/DataTables/DataTables.php" );
+</source>
+
+=== Installing with git ===
+From the command-line, clone the github repository into your <code>extensions/</code> directory, like so:
+$ git clone https://github.com/bluecurio/mediawiki-extension-datatables extensions/DataTables
+
+=== Installing as a ZIP ===
+If you don't have <code>[[wikipedia:git|git]]</code> installed on your computer, please follow the following directions:
+# Browse to https://github.com/bluecurio/mediawiki-extension-datatables
+# Find the button that says ''"Download ZIP"'' and click it
+# Download the ZIP file and put it on your computer in your Mediawiki's <code>extensions/</code> directory
+# Unzip it
+# Rename the folder to <code>DataTables</code>
+
+
+=== Configuration parameters ===
+None! 
+
+== More documentation ==
+The http://datatables.net/ website is a wonderful resource for learning to use the jQuery library. I highly recommend having a look at the examples and reading through the configuration settings. 
+
+
+== See also ==
+* http://datatables.net DataTables jQuery Extensiongg
